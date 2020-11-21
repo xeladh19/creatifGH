@@ -7,13 +7,12 @@ passe dans l'url
 
 
 // ROUTE DE LA NEWSLETTER
-// PATTERN : /index.php?email=xxx
+// PATTERN : /index.php?abonnes
 //Controleur: AbonnesControleur
 // ACTION: add
-  if (isset($_GET['email'])):
-    include_once '../app/controleurs/AbonnesControleur.php';
-    addAction($_GET['email']);
-    \App\Controleurs\AbonnesControleur\addAction($connexion);
+  if (isset($_GET['abonnes'])):
+    include_once '../app/routeurs/AbonnesRouteur.php';
+    
 
 
 

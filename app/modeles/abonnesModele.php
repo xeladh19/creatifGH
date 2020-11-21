@@ -7,10 +7,13 @@ SELECT,INSERT, UPDATE ET DELETE
 
 */
 
-function add(string $email){
-  //Ce tableau associatif est le résultat d'une requête SELECT
+namespace App\Modeles\AbonnesModele;
+
+
+function insert(\PDO $connexion,string $email){
+
 
   $sql = "INSERT INTO Abonnes
-          SET email = $email;";
+          SET mail = $email;";
   return $sql;
 }

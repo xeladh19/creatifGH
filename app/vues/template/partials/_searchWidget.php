@@ -10,20 +10,24 @@
 <div class="card my-4">
   <h5 class="card-header">Newsletter</h5>
   <div class="card-body">
-    <div class="input-group">
-      <form  action="index.html" method="post">
+
+
+      <form  class="input-group" action="newsletter" method="post">
 
 
 
-      <input type="email" name="email" class="form-control" placeholder="Votre mail">
+      <input type="email" name="email" id="email" class="form-control" placeholder="Votre mail">
 
 
 
 
-        </form>
+
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
+        <input type="submit" class="btn btn-secondary" name="" value="Go!">
+
+        <!-- <button class="btn btn-secondary" type="button">Go!</button> -->
+
       </span>
-    </div>
+  </form>
   </div>
 </div>

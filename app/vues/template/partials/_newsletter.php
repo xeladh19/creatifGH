@@ -1,12 +1,3 @@
-<?php
-/*
-./app/vues/abonnes/add.php
-Vue correspondant à l'action addAction
-Variables disponibles
-- $sql ARRAY string
-*/
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +7,6 @@ Variables disponibles
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>CREA'TIFs - Design capill'Hair</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,43 +18,8 @@ Variables disponibles
 
   <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">CREA'TIFs - Design capill'Hair</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="projets.html">Les Projets</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-
-      <div class="row">
-
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
-
-          <!-- Page Heading -->
-
-          <!-- Title -->
-          <h1 class="mt-4">Newsletter</h1>
-
-          <hr>
-
-
-          <!-- Post Content -->
-          <p class="lead">Merci, votre mail a bien été ajouté à notre base de données.</p>
-
-
+    <?php echo $content; ?>
 
 
 

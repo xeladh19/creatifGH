@@ -9,27 +9,6 @@ Options +FollowSymlinks
 RewriteEngine on
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # --------------------------------------------------
 # DETAIL D'UN PROJET
 # --------------------------------------------------
@@ -58,7 +37,7 @@ RewriteEngine on
         #TO tags.php?posts=editForm&id=x
         #FROM posts/xxx/edit/form
 
-    RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/form.html$ tags.php?posts=editForm&id=$1 [L]
+    RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/form.html$ index.php?posts=editForm&id=$1 [L]
 # --------------------------------------------------
 
 
@@ -68,7 +47,7 @@ RewriteEngine on
         #PATTERN: /tags/id/slug/edit/update.html
         #TO tags.php?posts=editForm&id=x
         #PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL'
-RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/update.html$ tags.php?posts=edit&id=$1 [L]
+RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/update.html$ index.php?posts=edit&id=$1 [L]
 
 
 # --------------------------------------------------
@@ -76,12 +55,15 @@ RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/update.html$ tags
 # --------------------------------------------------
         #  PATTERN: newsletter
 
+RewriteRule ^newsletter$ index.php?abonnes=add [L]
 
 
+# --------------------------------------------------
+# ROUTE DE LA CONFIRMATION
+# --------------------------------------------------
+    #  PATTERN:confirmation 
 
-
-
-
+RewriteRule ^newsletter$ index.php?abonnes=confirm [L]
 
 
 
