@@ -7,13 +7,18 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+
+  <?php include '../app/vues/template/partials/_head.php'; ?>
+
 <body>
-  <h1>BONJOUR</h1>
+
+  <?php include '../app/vues/template/partials/_navigation.php'; ?>
+  <?php include '../app/vues/template/partials/_content.php'; ?>
+  <?php include '../app/vues/template/partials/_sidebarWidget.php'; ?>
+  <?php include '../app/vues/template/partials/_searchWidget.php'; ?>
+  <?php include '../app/vues/template/partials/_categoriesWidget.php'; ?>
+  <?php include '../app/vues/template/partials/_footer.php'; ?>
+  <?php include '../app/vues/template/partials/_scripts.php'; ?>
+
 </body>
 </html>
