@@ -61,9 +61,9 @@ RewriteRule ^newsletter$ index.php?abonnes=add [L]
 # --------------------------------------------------
 # ROUTE DE LA CONFIRMATION
 # --------------------------------------------------
-    #  PATTERN:confirmation 
+    #  PATTERN:confirmation
 
-RewriteRule ^newsletter$ index.php?abonnes=confirm [L]
+RewriteRule ^confirmation$ index.php?abonnes=confirm [L]
 
 
 

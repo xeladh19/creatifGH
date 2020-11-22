@@ -29,7 +29,7 @@
 //
 //   //Je charge la vue show dans $content
 //   GLOBAL $content, $title;
-//   $title = $post['title'];
+//   $title = $projet['title'];
 //   ob_start();
 //     include '../app/vues/projets/show.php';
 //   $content = ob_get_clean();

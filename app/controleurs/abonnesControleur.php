@@ -32,7 +32,7 @@ function addAction(\PDO $connexion) {
 
 
 
-function confirmAction (\PDO $connexion, int $id){
+function confirmAction(){
 
   //Je charge la vue show dans $content
   GLOBAL $content, $title;

@@ -12,7 +12,7 @@ passe dans l'url
 // ACTION: add
   if (isset($_GET['abonnes'])):
     include_once '../app/routeurs/AbonnesRouteur.php';
-    
+
 
 
 
@@ -25,11 +25,19 @@ elseif (isset($_GET['projets'])):
 
 
 
-// ROUTE PAR DEFAUT
-// PATTERN: /
-// CTRL: projetsControleur
-// ACTION: index
+// //ROUTE PAR DEFAUT
+// // PATTERN: /
+// // CTRL: projetsControleur
+// // ACTION: index
 // else:
 //    include_once '../app/controleurs/projetsControleur.php';
 //    \App\Controleurs\ProjetsControleur\indexAction($connexion);
+
+
+//ROUTE PAR DEFAUT
+//PATTERN: /
+//CTRL: creatifsControleur
+//ACTION: showAction
+   include_once '../app/controleurs/creatifdControleur.php';
+   showAction($connexion );
  endif;
