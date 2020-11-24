@@ -10,7 +10,7 @@ define('USERPWD' , 'root');
 
 // Initialisation des zones dynamiques du template
 $content ='';
-$title ="CREA'TIFs - Design capill'Hair";
+$title ="";
 
 //FORMULAIRE
 define('POSTS_ADDFORM_TITLE', "Add a post");

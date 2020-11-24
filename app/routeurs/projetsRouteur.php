@@ -16,3 +16,8 @@ case 'delete':
   // ACTION: delete
   ProjetsControleur\deleteAction($connexion, $_GET['id']);
   break;
+
+default:
+ProjetsControleur\indexAction($connexion);
+break;
+}

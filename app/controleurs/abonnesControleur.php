@@ -9,7 +9,7 @@
      use App\Modeles\AbonnesModele;
 
 
-//
+// 
 // function addAction(string $email){
 //   include_once  '../app/modeles/AbonnesModele.php';
 //   $sql = add($email);
@@ -22,11 +22,11 @@
 // }
 
 
-function addAction(\PDO $connexion) {
+function addAction(\PDO $connexion, string $email) {
    // Je demande au modèle d'ajouter un abonne
    include_once '../app/modeles/abonnesModele.php';
    $id = \App\Modeles\AbonnesModele\insert($connexion, $_POST['email']);
-   // Je redirige vers la liste des posts
+   // Je redirige vers la liste
    header('location: ' . BASE_URL . 'confirmation');
 }
 
@@ -35,7 +35,7 @@ function addAction(\PDO $connexion) {
 function confirmAction(){
 
   //Je charge la vue show dans $content
-  GLOBAL $content, $title;
+  GLOBAL $content, $titre;
   $title = 'Newsletter';
   ob_start();
     include '../app/vues/abonnes/confirm.php';

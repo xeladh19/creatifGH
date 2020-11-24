@@ -1,41 +1,50 @@
-<!-- Project One -->
-<div class="row">
-  <?php foreach ($projets as $projet): ?>
 
+<?php
+/*
+  ./app/vues/posts/index.php
+    Variables disponibles
+    $posts= ARRAY(ARRAY(id, titre, texte, dateCreation, image, creatif))
+ */
 
-  <div class="col-md-4">
-    <a href="projets/<?php echo $projet['projetId'];?>/<?php echo \Noyau\Fonctions\slugify($projet['title']); ?>.html"><h1><?php echo $projet['title']; ?></h1>
-      <img class="img-fluid rounded mb-3 mb-md-0" src="images/1.jpg" alt="">
-    </a>
-  </div>
-
-
-  <div class="col-md-8">
-
-    <h3>Project One</h3>
-
-    <p class="lead">
-      par
-      <a href="artiste_details.html">Mister Univ'Hair</a> le 01-01-2017
-    </p>
-
-    <p><?php echo \Noyau\Fonctions\tronquer($projet['text'], 110); ?></p>
-
-    <a class="btn btn-primary" href="posts/<?php echo $projet['projetId']; ?>/<?php echo \Noyau\Fonctions\slugify($projet['title']); ?>.html">View Project</a>
-
-    <hr/>
-
-
-
-    <ul class="list-inline tags">
-      <li><a href="#" class="btn btn-default btn-xs">Vintage</a></li>
-      <li><a href="#" class="btn btn-default btn-xs">Football</a></li>
-    </ul>
-
-<?php endforeach; ?>
-
-  </div>
-</div>
-<!-- /.row -->
+?>
+<!-- Title -->
+  <h1 class="mt-4">Les projets <small>Design capill'Hair</small></h1>
 
 <hr>
+
+<!-- LISTE DES POSTS -->
+<?php foreach ($projets as $projet): ?>
+<div class="row">
+<div class="col-md-4">
+  <a href="#">
+    <img class="img-fluid rounded mb-3 mb-md-0" src="assets/images/<?php echo $projet['image']; ?>" alt="coiffure">
+  </a>
+</div>
+<div class="col-md-8">
+  <h3><?php echo $projet['titre']; ?></h3>
+  <p class="lead">
+    par
+    <a href="artiste_details.html"><?php echo $projet['creatif']; ?></a> le <?php echo date('d-m-Y', strtotime($projet['dateCreation'])); ?>
+
+  </p>
+  <p><?php echo substr($projet['texte'], 0, 100); ?></p>
+  <a class="btn btn-primary" href="projets/<?php echo $projet['id']; ?>/<?php echo \Noyau\Fonctions\slugify ($projet['titre']); ?>">View Project</a>
+  <hr/>
+
+<!-- Tags des projets -->
+
+  <ul class="list-inline tags">
+
+
+
+        <li><a href="#" class="btn btn-default btn-xs">Vintage</a></li>
+        <li><a href="#" class="btn btn-default btn-xs">Football</a></li>
+      </ul>
+
+
+</div>
+
+
+</div>
+<hr>
+<?php endforeach; ?>

@@ -15,10 +15,12 @@
     <div class="col-lg-8">
 
  <?php echo $content; ?>
- 
-    </div>
 
-<?php include '../app/vues/template/partials/_sidebarWidget.php'; ?>
+    </div>
+    <div class="col-md-4">
+          <?php include '../app/vues/template/partials/_sidebarWidget.php'; ?>  
+          </div>
+
 
   </div>
   <!-- /.row -->

@@ -14,6 +14,8 @@ function insert(\PDO $connexion,string $email){
 
 
   $sql = "INSERT INTO Abonnes
+
           SET mail = $email;";
+
   return $sql;
 }
