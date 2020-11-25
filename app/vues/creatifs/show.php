@@ -1,130 +1,46 @@
 <?php
 /*
-./app/vues/creattifs/show.php
+./app/vues/creatifs/show.php
 Détails du créatif
 Variables disponibles ;
 - creatifs ARRAY(id,pseudo, texte, image)
  */
 ?>
+<!-- Title -->
+<h1 class="mt-4"><?php echo $projet['titre']; ?> | <a href="projets/<?php echo $projet['id']; ?>/delete/<?php echo \Noyau\Fonctions\slugify ($projet['titre']); ?>">Supprimer le projet</a></h1>
 
-<!DOCTYPE html>
-<html lang="en">
+<p class="lead">
+  par
+  <a href="artiste_details.html"><?php echo $projet['creatif']; ?></a> le 01-01-2017
+</p>
 
-  <head>
+<hr>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!-- NOM DU PROJET -->
 
-    <title>CREA'TIFs - Design capill'Hair</title>
+<div class="row">
+  <div class="col-md-6">
+    <a href="#">
+      <img class="img-fluid rounded mb-3 mb-md-0" src="images/<?php echo $projet['image']; ?>" alt="">
+    </a>
+  </div>
+  <div class="col-md-6">
+    <p class="lead"><?php echo $projet['texte']; ?></p>
+    <hr/>
+    <p><?php echo $projet['texte']; ?></p>
+    <hr/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Les TAGS du projet -->
 
-    <!-- Custom styles for this template -->
-    <link href="css/blog-post.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">CREA'TIFs - Design capill'Hair</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="projets.html">Les projets
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="creatifs.html">Les CREA'TIFs</a>
-
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <div class="row">
-
-        <!-- Post Content Column -->
-    <?php echo $creatif['titre']; ?>
-    <div>
-      <?php echo $creatif['texte'];?>
-    </div>
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-          <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Newsletter</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Votre mail">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Tags</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-12">
-
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Couleur</a> | <a href="">Modifier</a>
-                    </li>
-                    <li>
-                      <a href="#">Géométrie</a> | <a href="">Modifier</a>
-                    </li>
-                    <li>
-                      <a href="#">Football</a> | <a href="">Modifier</a>
-                    </li>
-                    <li>
-                      <a href="#">Vintage</a> | <a href="">Modifier</a>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </div>
+  <ul class="list-inline tags">
 
 
-        </div>
 
-      </div>
-      <!-- /.row -->
+        <li><a href="#" class="btn btn-default btn-xs">Vintage</a></li>
+        <li><a href="#" class="btn btn-default btn-xs">Football</a></li>
+      </ul>
 
-    </div>
-    <!-- /.container -->
+  </div>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; IEPS 2017 | <a href="login.html">Administration</a></p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-
-</html>
+</div>
+<hr>

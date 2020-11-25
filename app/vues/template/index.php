@@ -14,9 +14,6 @@
 
   <?php include '../app/vues/template/partials/_navigation.php'; ?>
   <?php include '../app/vues/template/partials/_content.php'; ?>
-  <?php include '../app/vues/template/partials/_sidebarWidget.php'; ?>
-  <?php include '../app/vues/template/partials/_searchWidget.php'; ?>
-  <?php include '../app/vues/template/partials/_categoriesWidget.php'; ?>
   <?php include '../app/vues/template/partials/_footer.php'; ?>
   <?php include '../app/vues/template/partials/_scripts.php'; ?>
 

@@ -14,6 +14,7 @@
   <meta name="author" content="">
 
   <!-- <title>CREA'TIFs - Design capill'Hair</title> -->
+  <base href="<?php echo BASE_URL; ?>" target="_top">
 <title><?php echo $title; ?></title>
 
   <!-- Bootstrap core CSS -->

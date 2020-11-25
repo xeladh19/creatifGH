@@ -2,15 +2,15 @@
 /*
 ./app/controleurs/projetControleur.php
 */
-
+//
 namespace App\Controleurs\ProjetsControleur;
 use App\Modeles\ProjetsModele;
 
-function indexAction(\PDO $connexion){
+function indexActionByCreatifs(\PDO $connexion, int $id){
 
   // Je mets dans $projects la liste des 10 derniers projects que je demande au modèle
   include_once '../app/modeles/projetsModele.php';
-$projets = ProjetsModele\findAll($connexion);
+$projets = ProjetsModele\findAllByCreatifs($connexion, $id);
 
 // Je charge directement la vue index dans $content
 

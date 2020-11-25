@@ -8,13 +8,49 @@ Options +FollowSymlinks
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 
+
+
+
+
+
+
+
 # DETAILS D'UN PROJET
  # PATTERN: /projets/id/slug.html
  # VERS: index.php?postID=x
-   RewriteRule ^projets\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?postID=$1 [L]
+   RewriteRule ^projets\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?projetID=$1 [L]
 
 
 
+     # --------------------------------------------------
+     # DETAIL D'UN CREATIF
+     # --------------------------------------------------
+
+       # PATTERN: /creatifs/id/slug.html
+       # URL: index.php?postID=x
+       RewriteRule ^creatifs\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/$ index.php?creatifID=$1 [L]
+
+
+
+
+       # --------------------------------------------------
+       #   ROUTE DE MODIFICATION D'UN TAG: Formulaire de Modification
+       # --------------------------------------------------
+               #PATTERN: /tags/id/slug/edit/form.html
+               #TO tags.php?posts=editForm&id=x
+               #FROM posts/xxx/edit/form
+
+           RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/form.html$ index.php?posts=editForm&id=$1 [L]
+       # --------------------------------------------------
+
+
+       # --------------------------------------------------
+       #     ROUTE DE MODIFICATION D'UN TAG: UPDATE
+       # --------------------------------------------------
+               #PATTERN: /tags/id/slug/edit/update.html
+               #TO tags.php?posts=editForm&id=x
+               #PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL'
+       RewriteRule ^tags\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/edit\/update.html$ index.php?posts=edit&id=$1 [L]
 
 
 

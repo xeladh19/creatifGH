@@ -21,7 +21,7 @@
 <div class="row">
   <div class="col-md-6">
     <a href="#">
-      <img class="img-fluid rounded mb-3 mb-md-0" src="assets/images/<?php echo $projet['image']; ?>" alt="">
+      <img class="img-fluid rounded mb-3 mb-md-0" src="images/<?php echo $projet['image']; ?>" alt="">
     </a>
   </div>
   <div class="col-md-6">

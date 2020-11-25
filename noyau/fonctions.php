@@ -14,7 +14,7 @@ function slugify(string $str) {
 
 
 
-function tronquer(string $chaine, int $nbreCaracteres = 110) :string {
+function tronquer(string $chaine, int $nbreCaracteres = 100) :string {
    if (strlen($chaine) > $nbreCaracteres):
       $positionEspace = strpos($chaine, ' ', $nbreCaracteres);
       return substr($chaine, 0, $positionEspace);
