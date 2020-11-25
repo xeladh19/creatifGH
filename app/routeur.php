@@ -43,7 +43,7 @@ include_once '../app/controleurs/projetsControleur.php';
 
 elseif (isset($_GET['creatifID'])):
   include_once '../app/controleurs/creatifsControleur.php';
-  \App\Controleurs\CreatifsControleur\showAction($connexion, $_GET['creatifsID']);
+  \App\Controleurs\CreatifsControleur\showAction($connexion, $_GET['creatifID']);
 
 
 

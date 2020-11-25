@@ -54,11 +54,12 @@
 
 
 
-                <a class="btn btn-primary" href="creatifs/<?php echo $creatif['creatif']; ?>/<?php echo \Noyau\Fonctions\slugify ($creatif['id']); ?>">View Project</a>
+                <a class="btn btn-primary" href="creatifs/<?php echo $creatif['id']; ?>/<?php echo \Noyau\Fonctions\slugify ($creatif['pseudo']); ?>">View Project</a>
 
 
 
 
+<?php var_dump($creatif); ?>
 
 
 

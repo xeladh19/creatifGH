@@ -27,8 +27,8 @@ RewriteEngine on
      # --------------------------------------------------
 
        # PATTERN: /creatifs/id/slug.html
-       # URL: index.php?postID=x
-       RewriteRule ^creatifs\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)\/$ index.php?creatifID=$1 [L]
+       # URL: index.php?creatifID=x
+       RewriteRule ^creatifs\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?creatifID=$1 [L]
 
 
 

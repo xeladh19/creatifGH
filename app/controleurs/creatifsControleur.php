@@ -27,12 +27,13 @@ function indexAction(\PDO $connexion){
   function showAction (\PDO $connexion, int $id){
     //Je mets dans mon $projets les informations du projet que je demande au modèle
     include_once '../app/modeles/creatifsModele.php';
-    $creatif = CreatifsModele\findOneById($connexion, $id);
+    $projet= CreatifsModele\findAllByCreatifs($connexion, $id);
+
 
     //Je charge la vue show dans $content
     GLOBAL $content, $title;
-    $title = $creatif['titre'];
-    $id = $creatif['id'];
+    $title = $projet['pseudo'];
+
     ob_start();
       include '../app/vues/projets/show.php';
     $content = ob_get_clean();

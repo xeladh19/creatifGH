@@ -7,7 +7,6 @@
 
 ?>
 <!-- Title -->
-<h1 class="mt-4"><?php echo $projet['titre']; ?> | <a href="projets/<?php echo $projet['id']; ?>/delete/<?php echo \Noyau\Fonctions\slugify ($projet['titre']); ?>">Supprimer le projet</a></h1>
 
 <p class="lead">
   par

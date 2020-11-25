@@ -6,7 +6,7 @@ S'occupe des transactions avec la base de donnée
 */
 
 namespace App\Modeles\creatifsModele;
-
+use PDO;
 function findOneById(\PDO $connexion, int $id){
   $sql ="SELECT *
   FROM creatifs
@@ -30,8 +30,9 @@ function findAll(\PDO $connexion){
 
 function findAllByCreatifs(\PDO $connexion, int $id){
   $sql ="SELECT *
-         FROM creatifs
-         WHERE id = :id;";
+         FROM projets p
+         JOIN creatifs c on c.id = p.creatif
+         WHERE p.creatif = :id;";
   $rs = $connexion->prepare($sql);
   $rs->bindValue(':id', $id, PDO::PARAM_INT);
   $rs->execute();
